@@ -1,0 +1,16 @@
+.green-background { 
+    background: linear-gradient(300deg, #424242, #616161, #9E9E9E);  
+    animation: 5s linear infinite alternate; 
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

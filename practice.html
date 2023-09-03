@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Bar on Side of Text in Bootstrap</title>
+    <!-- Include Bootstrap CSS if not already included -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .text-with-bar {
+        position: relative;
+      }
+
+      .text-with-bar::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        /* Adjust this value to control the distance from text */
+        width: 10px; /* Adjust this value to control the width of the bar */
+        height: 2px; /* Adjust this value to control the height/thickness of the bar */
+        background-color: #007bff; /* Adjust this value to set the bar's color */
+      }
+
+      .s-title-group .has-fresh-line .s-component-content {
+        display: inline-block;
+        zoom: 1;
+        max-width: 100%;
+      }
+
+      .s-variation-default
+        .s-title-group
+        .has-fresh-line
+        .s-component-content:after,
+      .s-variation-default
+        .s-title-group
+        .has-fresh-line
+        .s-component-content:before,
+      .s-variation-default .s-title-group .has-line .s-title:after,
+      .s-variation-default .s-title-group .has-line .s-title:before {
+        background: #333;
+      }
+
+      .s-title-group .has-fresh-line .s-component-content:after,
+      .s-title-group .has-fresh-line .s-component-content:before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        height: 2px;
+        width: 80px;
+        margin: 0 10px;
+        display: inline-block;
+        zoom: 1;
+      }
+
+      div.s-component-content.s-font-title::before {
+        right: 100%; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="text-with-bar">
+        <p>This is some text with a horizontal bar on the side.</p>
+      </div>
+    </div>
+
+    <div class="s-component s-text s-animation-page-slide_in">
+      <div class="">
+        <div
+          class="s-component-content s-font-title"
+          style="white-space: pre-wrap"
+        >
+          <!-- ::before -->
+          <h2>
+            <p><strong>My journey</strong></p>
+          </h2>
+          <!-- ::after -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
